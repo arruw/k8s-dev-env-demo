@@ -1,0 +1,26 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: scaffold-test
+build:
+  local: {}
+  artifacts:
+  - image: skaffold-test-service1
+    context: services/service1
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      infer:
+      - 'src/**/*.py'
+  - image: skaffold-test-service2
+    context: services/service2
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      infer:
+      - 'src/**/*.py'
+deploy:
+  kubectl:
+    manifests:
+    - services/service1/deployment.yaml
+    - services/service2/deployment.yaml
