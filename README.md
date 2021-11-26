@@ -20,7 +20,9 @@ Simple demo microservices and k8s development environment.
     - [x] Service
     - [x] Deployement
     - [ ] Request & Limit
+    - [ ] Health probes
     - [ ] Service Mesh
+    - [ ] Node placement
  - [ ] Devcontainer local environemnt (?? Monorepo devcontainers are not supported ??)
  - [ ] Helm
  - [ ] Skaffold
